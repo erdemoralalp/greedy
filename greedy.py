@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import operator;
 def greedy(deger,yuk,kapasite,adet):
 	oranlar = []
 	while adet > 0 :
@@ -9,7 +10,7 @@ def greedy(deger,yuk,kapasite,adet):
 		adet -= 1
 	agirlik = 0
 	test=[]
-	esyalar = sorted(oranlar,reverse=True)
+	esyalar = sorted(oranlar,key=operator.itemgetter(0),reverse=True)
 	for e in esyalar:
 		#e[0] = oranlar
 		#e[1] = esya
